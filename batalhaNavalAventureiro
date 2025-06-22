@@ -1,0 +1,49 @@
+#include <stdio.h> 
+
+
+int main (){
+
+    int tabuleiro[10][10] = {0};
+
+
+    //posicionando os barcos
+    for (int barco = 0; barco < 3; barco++)
+    {
+        //verificando se na posição indicada ainda conta 0(agua)
+        if (tabuleiro[9][barco + 2] == 0)
+            tabuleiro[9][barco + 2] = 3;
+        
+        if (tabuleiro[9][barco + 2] == 0)
+            tabuleiro[9][barco + 2] = 3;
+
+        if  (tabuleiro[barco + 5][8] == 0)
+             tabuleiro[barco + 5][8] = 3;
+
+        if (tabuleiro[barco + 1][barco + 2] == 0) 
+            tabuleiro[barco + 1][barco + 2] = 3;
+
+        if (tabuleiro[barco + 5][6 - barco] == 0)    
+            tabuleiro[barco + 5][6 - barco] = 3;
+
+    }
+    
+
+    //mostrar tabuleiro
+  
+        int T1; 
+        int T2;
+
+        for ( T1 = 0; T1 < 10; T1++)
+        {
+            for (T2 = 0; T2 < 10; T2++)
+            {
+                printf("%d ", tabuleiro[T1][T2]);
+            }
+            printf("\n");
+        }
+        
+ 
+
+    return 0;
+}
+
